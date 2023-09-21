@@ -9,13 +9,22 @@ namespace Exercise3
 
             try
             {
-                Person person = new Person();
+                PersonHandler handler = new PersonHandler();
 
-                PersonHandler personHandler = new PersonHandler();
-                person = personHandler.CreatePerson(25, "John", "Smith", 180, 75);
+                handler.CreatePerson(25, "John", "Smith", 180, 75);
+                handler.CreatePerson(25, "Ana", "Smith", 180, 70);
+                handler.CreatePerson(30, "George", "Scott", 185, 85);
 
-                Console.WriteLine($"{person.FName} {person.LName} age: {person.Age}" +
-                    $" heigth: {person.Height}cm weight: {person.Weight}kg");
+                handler.WritePersons();
+
+                handler.SetWeight("John", "Smith", 80);
+
+                handler.WritePersons();
+
+                handler.RemovePerson("George", "Scott");
+
+                handler.WritePersons();
+
             }
             catch (Exception ex)
             {
