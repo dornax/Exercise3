@@ -12,6 +12,20 @@ namespace Exercise3
         {
             pers.Age = age;
         }
+
+        public Person CreatePerson(int age, string fName, string lName, double height, double weight)
+        {
+
+            var person = new Person()
+            {
+                Age = age,
+                FName = fName,
+                LName = lName,
+                Height = height,
+                Weight = weight
+            };
+
+            return person;
+        }
     }
 }
-

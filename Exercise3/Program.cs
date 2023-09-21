@@ -9,15 +9,13 @@ namespace Exercise3
 
             try
             {
-                Person person = new Person
-                {
-                    FName = "John",
-                    LName = "Smith"
-                };
-                PersonHandler personHandler = new PersonHandler();
-                personHandler.SetAge(person, 25);
+                Person person = new Person();
 
-                Console.WriteLine($"{person.FName} {person.LName} age: {person.Age}");
+                PersonHandler personHandler = new PersonHandler();
+                person = personHandler.CreatePerson(25, "John", "Smith", 180, 75);
+
+                Console.WriteLine($"{person.FName} {person.LName} age: {person.Age}" +
+                    $" heigth: {person.Height}cm weight: {person.Weight}kg");
             }
             catch (Exception ex)
             {
