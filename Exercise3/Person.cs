@@ -8,14 +8,6 @@ namespace Exercise3
 {
     internal class Person
     {
-
-        public Person(string fName, string lName)
-        {
-
-            FName = fName;
-            LName = lName;
-        }
-
         private int _age;
 
         public int Age
@@ -77,3 +69,4 @@ namespace Exercise3
         }
     }
 }
+

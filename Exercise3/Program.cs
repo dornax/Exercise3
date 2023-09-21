@@ -9,9 +9,15 @@ namespace Exercise3
 
             try
             {
-                Person person = new Person("John", "Smith");
-                person.Age = 25;
-                Console.WriteLine($"{person.FName} {person.LName} {person.Age}");
+                Person person = new Person
+                {
+                    FName = "John",
+                    LName = "Smith"
+                };
+                PersonHandler personHandler = new PersonHandler();
+                personHandler.SetAge(person, 25);
+
+                Console.WriteLine($"{person.FName} {person.LName} age: {person.Age}");
             }
             catch (Exception ex)
             {
